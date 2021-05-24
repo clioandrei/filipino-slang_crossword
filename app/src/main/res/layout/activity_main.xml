@@ -7,16 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="match_parent"
-        android:layout_height="@android:dimen/thumbnail_height"
-        android:layout_marginHorizontal="20pt"
-        tools:layout_editor_absoluteX="46dp">
-
-        // Image and Audio layout here
-
-    </FrameLayout>
+    // Image and Audio layout here
 
     // Button for Mode Selection
 
