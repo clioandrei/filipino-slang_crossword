@@ -10,7 +10,23 @@
         android:layout_gravity="center">
 
 
-    // Image and Audio Layout Here
+    <ImageView
+        android:id="@+id/image_holder"
+        android:layout_width="match_parent"
+        android:layout_height="@android:dimen/thumbnail_height"
+        android:layout_marginHorizontal="20pt"
+        android:layout_marginTop="20pt"
+        android:src="@drawable/logo_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/image_holder"
+        app:layout_constraintBottom_toBottomOf="@+id/image_holder"/>
 
     // Button for Mode Selection
 
