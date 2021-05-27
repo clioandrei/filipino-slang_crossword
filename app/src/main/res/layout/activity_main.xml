@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:background="#DFDFDF"
-    tools:context=".MainActivity">
-=======
+
 <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +9,6 @@
         tools:context=".MainActivity"
         android:background="#DFDFDF"
         android:layout_gravity="center">
->>>>>>> a21fa290e236a4f6384d1c6c46e73927815e6f31
 
     <ImageView
         android:id="@+id/image_holder"
@@ -31,15 +21,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent" />
-
-<<<<<<< HEAD
-=======
-    // TODO: Buttons for Mode Selection
-=======
-        app:layout_constraintTop_toTopOf="parent"
-        />
 
     <ToggleButton
         android:layout_width="20pt"
@@ -110,9 +92,7 @@
             android:textAllCaps="true"/>
 
     </RadioGroup>
->>>>>>> a21fa290e236a4f6384d1c6c46e73927815e6f31
 
 <!--    // Play Game Button and Link to about us Here-->
 
->>>>>>> Guiaochino-master
 </androidx.constraintlayout.widget.ConstraintLayout>
