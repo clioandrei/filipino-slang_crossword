@@ -13,4 +13,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void onDefaultToggleClick(View view) {
+        Toast.makeText( this, "DefaultToggle", Toast.LENGTH_SHORT).show();
+    }
+
+    public void onCustomToggleClick(View view) {
+        Toast.makeText(this, "CustomToggle", Toast.LENGTH_SHORT).show();
+    }
 }
