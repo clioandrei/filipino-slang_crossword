@@ -13,4 +13,5 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+>>>>>>> a21fa290e236a4f6384d1c6c46e73927815e6f31
 </resources>
