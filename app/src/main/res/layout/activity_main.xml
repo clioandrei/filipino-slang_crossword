@@ -98,6 +98,7 @@
         android:layout_height="32dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/play_button_background"
+        android:onClick="onClickPlayButton"
         android:text="Play Game"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -105,7 +106,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/levelSelection"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintVertical_bias="0.108"
+        tools:ignore="OnClick" />
 
     <TextView
         android:id="@+id/txtAboutUS"
@@ -117,6 +119,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
