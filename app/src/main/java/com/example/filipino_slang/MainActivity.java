@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
         // What mode are you in.
         String gameMode =  String.format("You are in %s.", rdBtnSelectedMode.getText());
-        
+
         playGame.putExtra(EXTRA_MESSAGE, gameMode);
         startActivity(playGame);
     }
