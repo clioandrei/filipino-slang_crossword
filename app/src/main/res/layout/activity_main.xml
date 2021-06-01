@@ -24,14 +24,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
+        android:id="@+id/tglBtnMusic"
         android:layout_width="20pt"
         android:layout_height="20pt"
-        android:textOn=""
-        android:textOff=""
         android:background="@drawable/toggle_selector"
-        android:onClick="onCustomToggleClick"
-        app:layout_constraintEnd_toEndOf="@+id/image_holder"
-        app:layout_constraintBottom_toBottomOf="@+id/image_holder"/>
+        android:onClick="onMusicClick"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="@+id/image_holder"
+        app:layout_constraintEnd_toEndOf="@+id/image_holder" />
 
     <TextView
         android:id="@+id/promptText"
