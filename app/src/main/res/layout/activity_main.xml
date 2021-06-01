@@ -54,7 +54,8 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/promptText">
+        app:layout_constraintTop_toBottomOf="@+id/promptText"
+        tools:ignore="ExtraText">
 
         <RadioButton
             android:id="@+id/easySelection"
@@ -64,6 +65,8 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Easy Mode"
+            android:onClick="checkedGameMode"
+            android:checked="true"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
 
@@ -76,6 +79,7 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Normal Mode"
+            android:onClick="checkedGameMode"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
 
@@ -88,6 +92,7 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Hard Mode"
+            android:onClick="checkedGameMode"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
     </RadioGroup>
