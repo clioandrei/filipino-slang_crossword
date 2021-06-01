@@ -24,14 +24,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
+        android:id="@+id/tglBtnMusic"
         android:layout_width="20pt"
         android:layout_height="20pt"
-        android:textOn=""
-        android:textOff=""
         android:background="@drawable/toggle_selector"
-        android:onClick="onCustomToggleClick"
-        app:layout_constraintEnd_toEndOf="@+id/image_holder"
-        app:layout_constraintBottom_toBottomOf="@+id/image_holder"/>
+        android:onClick="onMusicClick"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toBottomOf="@+id/image_holder"
+        app:layout_constraintEnd_toEndOf="@+id/image_holder" />
 
     <TextView
         android:id="@+id/promptText"
@@ -54,7 +55,8 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/promptText">
+        app:layout_constraintTop_toBottomOf="@+id/promptText"
+        tools:ignore="ExtraText">
 
         <RadioButton
             android:id="@+id/easySelection"
@@ -64,6 +66,8 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Easy Mode"
+            android:onClick="checkedGameMode"
+            android:checked="true"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
 
@@ -76,6 +80,7 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Normal Mode"
+            android:onClick="checkedGameMode"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
 
@@ -88,6 +93,7 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Hard Mode"
+            android:onClick="checkedGameMode"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
     </RadioGroup>
