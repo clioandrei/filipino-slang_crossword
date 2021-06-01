@@ -16,13 +16,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ToggleButton;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class MainActivity extends AppCompatActivity {
 
+    public static String EXTRA_MESSAGE;
     Button btnPlayGame;
     RadioGroup rdGrpSelection;
     RadioButton rdBtnSelectedMode;
     ToggleButton tglBtnMusic;
-    public TextView txtGameMode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,17 +66,16 @@ public class MainActivity extends AppCompatActivity {
 
     // For opening the Game Screen
     public void openGameScreen(){
+        // Declaration of Opening the Game Screen
         Intent playGame = new Intent(this, GameScreen.class);
-        startActivity(playGame);
 
-        // TODO Changing of text view in GameScreen
         // Declaration of Radio Button
-        LayoutInflater inflater = getLayoutInflater();
-        View myView = inflater.inflate(R.layout.activity_game_screen, null);
         rdBtnSelectedMode = (RadioButton) findViewById(rdGrpSelection.getCheckedRadioButtonId());
-        // Declaration of Text View Mode in Game Screen
-        txtGameMode = (TextView) myView.findViewById(R.id.txtGameMode);
+
         // What mode are you in.
-        txtGameMode.setText(String.format("You are in %s.", rdBtnSelectedMode.getText()));
+        String gameMode =  String.format("You are in %s.", rdBtnSelectedMode.getText());
+
+        playGame.putExtra(EXTRA_MESSAGE, gameMode);
+        startActivity(playGame);
     }
 }
