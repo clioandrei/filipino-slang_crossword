@@ -100,9 +100,9 @@
 
     <Button
         android:id="@+id/btnPlayGame"
-        android:layout_width="185dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="20pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50pt"
         android:background="@drawable/play_button_background"
         android:onClick="onClickPlayGame"
         android:text="Play Game"
@@ -112,7 +112,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/levelSelection"
-        app:layout_constraintVertical_bias="0.108"
         tools:ignore="OnClick" />
 
     <TextView
@@ -123,7 +122,6 @@
         android:text="GAWA NG 3TECH - GOMEZ, JACULO, TIAMZON"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
