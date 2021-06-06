@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     // For the Selection Modes (Toast)
     public void checkedGameMode(View view) {
         rdBtnSelectedMode = (RadioButton) findViewById(rdGrpSelection.getCheckedRadioButtonId());
-        Toast.makeText(this, "Selected Mode: " + rdBtnSelectedMode.getText(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Difficulty : " + rdBtnSelectedMode.getText(), Toast.LENGTH_SHORT).show();
     }
 
     // For opening the Game Screen
