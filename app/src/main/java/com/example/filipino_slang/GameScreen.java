@@ -19,7 +19,7 @@ public class GameScreen extends AppCompatActivity {
 
         // Getting the method in the Main Activity
         Intent playGame = getIntent();
-        String gameMode = playGame.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        String gameMode = playGame.getStringExtra(MainActivity.whatMode);
 
         // Declaration of Game Mode Text View
         txtGameMode = findViewById(R.id.txtGameMode);

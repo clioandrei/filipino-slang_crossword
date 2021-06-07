@@ -1,26 +1,19 @@
 package com.example.filipino_slang;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
-import android.provider.MediaStore;
-import android.view.LayoutInflater;
+import android.os.Bundle;
 import android.view.View;
-import android.widget.ActionMenuView;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.ToggleButton;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static String EXTRA_MESSAGE;
+    public static String whatMode;
     Button btnPlayGame;
     RadioGroup rdGrpSelection;
     RadioButton rdBtnSelectedMode;
@@ -75,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         // What mode are you in.
         String gameMode =  String.format("%s", rdBtnSelectedMode.getText());
 
-        playGame.putExtra(EXTRA_MESSAGE, gameMode);
+        playGame.putExtra(whatMode, gameMode);
         startActivity(playGame);
     }
 }
