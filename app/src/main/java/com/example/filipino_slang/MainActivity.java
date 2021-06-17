@@ -57,6 +57,18 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Difficulty : " + rdBtnSelectedMode.getText(), Toast.LENGTH_SHORT).show();
     }
 
+    @Override
+    public void onBackPressed() {
+        openExitPrompt();
+    }
+
+    // For opening the Exit Prompt
+    public void openExitPrompt(){
+        Intent exitGame = new Intent(this, ExitPrompt.class);
+        startActivity(exitGame);
+    }
+
+
     // For opening the Game Screen
     public void openGameScreen(){
         // Declaration of Opening the Game Screen
