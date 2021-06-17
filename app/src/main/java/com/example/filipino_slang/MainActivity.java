@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static String whatMode;
+    static String whatMode;
     Button btnPlayGame;
     RadioGroup rdGrpSelection;
     RadioButton rdBtnSelectedMode;
