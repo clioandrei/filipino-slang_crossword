@@ -40,7 +40,7 @@ public class ExitPrompt extends AppCompatActivity {
 
     // for opening Menu Screen
     public void openMenuScreen(){
-        Intent returnGame = new Intent(this, MainActivity.class);
-        startActivity(returnGame);
+        Intent returnMenuScreen = new Intent(this, MainActivity.class);
+        startActivity(returnMenuScreen);
     }
 }
