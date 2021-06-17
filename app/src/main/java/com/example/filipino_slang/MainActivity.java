@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         rdBtnSelectedMode = (RadioButton) findViewById(rdGrpSelection.getCheckedRadioButtonId());
 
         // What mode are you in.
-        String gameMode =  String.format("You are in %s.", rdBtnSelectedMode.getText());
+        String gameMode =  String.format("%s", rdBtnSelectedMode.getText());
 
         playGame.putExtra(EXTRA_MESSAGE, gameMode);
         startActivity(playGame);
