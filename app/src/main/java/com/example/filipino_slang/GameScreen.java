@@ -28,6 +28,7 @@ public class GameScreen extends AppCompatActivity {
         txtGameMode = findViewById(R.id.txtGameMode);
         txtGameMode.setText(gameMode);
 
+        // Declaration of Return to Menu Screen Button
         btnBack = (Button) findViewById(R.id.btnBack);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
