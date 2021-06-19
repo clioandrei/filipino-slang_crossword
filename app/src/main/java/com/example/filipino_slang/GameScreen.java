@@ -24,7 +24,5 @@ public class GameScreen extends AppCompatActivity {
         // Declaration of Game Mode Text View
         txtGameMode = findViewById(R.id.txtGameMode);
         txtGameMode.setText(gameMode);
-
-        //TODO: Create the program to generate a crossword puzzle
     }
 }
