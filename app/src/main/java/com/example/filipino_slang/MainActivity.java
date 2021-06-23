@@ -1,5 +1,6 @@
 package com.example.filipino_slang;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +12,13 @@ import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     static String whatMode;
     Button btnPlayGame;
     RadioGroup rdGrpSelection;
-    RadioButton rdBtnSelectedMode;
+    RadioButton rdBtnSelectedMode, rdBtnEasyMode, rdBtnNormalMode, rdBtnHardMode;
     ToggleButton tglBtnMusic;
 
     @Override
@@ -25,37 +27,52 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Declaration of Music Toggle Button
-        tglBtnMusic = (ToggleButton) findViewById(R.id.tglBtnMusic);
+        tglBtnMusic = findViewById(R.id.tglBtnMusic);
 
         // Declaration of Play Game Button
-        btnPlayGame = (Button) findViewById(R.id.btnPlayGame);
+        btnPlayGame = findViewById(R.id.btnPlayGame);
 
-        // Declaration of Radio Group
-        rdGrpSelection = (RadioGroup) findViewById(R.id.levelSelection);
+        // Declaration of Radio Group Level Selections
+        rdGrpSelection = findViewById(R.id.levelSelection);
 
-        btnPlayGame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Opens Game Screen
-                openGameScreen();
-            }
-        });
+        // Declaration of Game Mode Radio Buttons
+        rdBtnEasyMode= findViewById(R.id.easySelection);
+        rdBtnNormalMode= findViewById(R.id.normalSelection);
+        rdBtnHardMode= findViewById(R.id.hardSelection);
+
+        // Clicking Buttons
+        btnPlayGame.setOnClickListener(this);
+        tglBtnMusic.setOnClickListener(this);
+        rdBtnEasyMode.setOnClickListener(this);
+        rdBtnNormalMode.setOnClickListener(this);
+        rdBtnHardMode.setOnClickListener(this);
     }
 
-    // For Music On or Off (Toast)
-    public void onMusicClick(View view) {
-        if (tglBtnMusic.isChecked()){
-            Toast.makeText(this, "Music : Off", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Music : On", Toast.LENGTH_SHORT).show();
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.tglBtnMusic:
+                if (tglBtnMusic.isChecked()){
+                    Toast.makeText(this, "Music : Off", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Music : On", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case R.id.btnPlayGame:
+                openGameScreen();
+                break;
+            case R.id.easySelection:
+            case R.id.normalSelection:
+            case R.id.hardSelection:
+                rdBtnSelectedMode = findViewById(rdGrpSelection.getCheckedRadioButtonId());
+                Toast.makeText(this, "Difficulty : " + rdBtnSelectedMode.getText(), Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
         }
     }
 
-    // For the Selection Modes (Toast)
-    public void checkedGameMode(View view) {
-        rdBtnSelectedMode = (RadioButton) findViewById(rdGrpSelection.getCheckedRadioButtonId());
-        Toast.makeText(this, "Difficulty : " + rdBtnSelectedMode.getText(), Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     public void onBackPressed() {
@@ -75,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         Intent playGame = new Intent(this, GameScreen.class);
 
         // Declaration of Radio Button
-        rdBtnSelectedMode = (RadioButton) findViewById(rdGrpSelection.getCheckedRadioButtonId());
+        rdBtnSelectedMode = findViewById(rdGrpSelection.getCheckedRadioButtonId());
 
         // What mode are you in.
         String gameMode =  String.format("%s", rdBtnSelectedMode.getText());

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ExitPrompt extends AppCompatActivity {
+public class ExitPrompt extends AppCompatActivity implements View.OnClickListener {
 
     Button btnExitGame;
     Button btnReturnGame;
@@ -23,19 +23,23 @@ public class ExitPrompt extends AppCompatActivity {
         //Declaration for Return button
         btnReturnGame = (Button) findViewById(R.id.btnReturnGame);
 
-        btnExitGame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finishAffinity();
-            }
-        });
+        // For Clicking Buttons
+        btnExitGame.setOnClickListener(this);
+        btnReturnGame.setOnClickListener(this);
+    }
 
-        btnReturnGame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    public void onClick(View v) {
+        switch(v.getId()){
+            case R.id.btnReturnGame:
                 openMenuScreen();
-            }
-        });
+                break;
+            case R.id.btnExitGame:
+                finishAffinity();
+                break;
+            default:
+                break;
+        }
     }
 
     // for opening Menu Screen

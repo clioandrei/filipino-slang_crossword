@@ -66,7 +66,6 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Easy Mode"
-            android:onClick="checkedGameMode"
             android:checked="true"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
@@ -80,7 +79,6 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Normal Mode"
-            android:onClick="checkedGameMode"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
 
@@ -93,7 +91,6 @@
             android:button="@android:color/transparent"
             android:gravity="center"
             android:text="Hard Mode"
-            android:onClick="checkedGameMode"
             android:textAllCaps="true"
             android:textColor="@drawable/text_color_selection" />
     </RadioGroup>

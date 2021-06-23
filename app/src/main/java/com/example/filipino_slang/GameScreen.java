@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class GameScreen extends AppCompatActivity {
+public class GameScreen extends AppCompatActivity implements View.OnClickListener {
 
     TextView txtGameMode;
     Button btnBack;
@@ -31,12 +31,19 @@ public class GameScreen extends AppCompatActivity {
         // Declaration of Return to Menu Screen Button
         btnBack = (Button) findViewById(R.id.btnBack);
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        btnBack.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnBack:
                 openMenuScreen();
-            }
-        });
+                break;
+            default:
+                break;
+
+        }
     }
 
     public void openMenuScreen(){
